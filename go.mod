@@ -3,7 +3,7 @@ module github.com/tl-marco-tormento/truelayer-signing-k6
 go 1.17
 
 require (
-	github.com/Truelayer/truelayer-signing/go v0.0.0-20211023160453-ed215ff0f8b2
+	github.com/Truelayer/truelayer-signing/go v0.1.2
 	go.k6.io/k6 v0.36.0
 )
 
