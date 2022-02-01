@@ -1,4 +1,4 @@
-package signing
+package truelayer
 
 import (
 	"go.k6.io/k6/js/modules"
