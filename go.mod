@@ -2,10 +2,10 @@ module github.com/tl-marco-tormento/truelayer-k6-ext
 
 go 1.17
 
-replace github.com/Truelayer/truelayer-signing/go => /Users/marco.tormento/truelayer/dev/general/projects/truelayer-signing/go
+//replace github.com/Truelayer/truelayer-signing/go => /Users/marco.tormento/truelayer/dev/general/projects/truelayer-signing/go
 
 require (
-	github.com/Truelayer/truelayer-signing/go v0.1.2
+	github.com/Truelayer/truelayer-signing/go v0.1.3-0.20220202102839-d91fb3da1e97
 	go.k6.io/k6 v0.36.0
 )
 
