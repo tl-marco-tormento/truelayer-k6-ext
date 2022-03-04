@@ -16,10 +16,13 @@ type Truelayer struct{}
 
 type Url struct{}
 
-func (*Truelayer) Sign(kid string, pem string, body string) string {
+func (*Truelayer) Sign(kid string, pem string, path string, method string, headers map[string][]byte, body string) string {
 	signature, _ := tlsigning.SignWithPem(kid, []byte(pem)).
+		Path(path).
+		Method(method).
+		Headers(headers).
 		Body([]byte(body)).
-		SignBodyOnly()
+		Sign()
 	return signature
 }
 

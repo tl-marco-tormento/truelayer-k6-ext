@@ -5,7 +5,7 @@ go 1.17
 //replace github.com/Truelayer/truelayer-signing/go => /Users/marco.tormento/truelayer/dev/general/projects/truelayer-signing/go
 
 require (
-	github.com/Truelayer/truelayer-signing/go v0.1.3-0.20220202102839-d91fb3da1e97
+	github.com/Truelayer/truelayer-signing/go v0.1.4
 	go.k6.io/k6 v0.36.0
 )
 

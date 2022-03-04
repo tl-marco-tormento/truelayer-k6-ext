@@ -22,6 +22,8 @@ github.com/Truelayer/truelayer-signing/go v0.1.2 h1:XJ0nVTnOjT076XNErKNhOE9NL9hv
 github.com/Truelayer/truelayer-signing/go v0.1.2/go.mod h1:SWksk9wzvQRhn0rb8Q0drHt9N0w67pvTg0PWBdQ+cWk=
 github.com/Truelayer/truelayer-signing/go v0.1.3-0.20220202102839-d91fb3da1e97 h1:jf3itsWWYYi1Bdy02tGo15Ur6l136hJCy3VxOsGyPO8=
 github.com/Truelayer/truelayer-signing/go v0.1.3-0.20220202102839-d91fb3da1e97/go.mod h1:SWksk9wzvQRhn0rb8Q0drHt9N0w67pvTg0PWBdQ+cWk=
+github.com/Truelayer/truelayer-signing/go v0.1.4 h1:tdYr7J8orPEUlrVJ4g922V0OVr+Px4QDOxaHbOcbI7w=
+github.com/Truelayer/truelayer-signing/go v0.1.4/go.mod h1:SWksk9wzvQRhn0rb8Q0drHt9N0w67pvTg0PWBdQ+cWk=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/andybalholm/brotli v1.0.3 h1:fpcw+r1N1h0Poc1F/pHbW40cUm/lMEQslZtCkBQ0UnM=
