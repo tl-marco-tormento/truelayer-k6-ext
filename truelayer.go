@@ -60,7 +60,7 @@ func (*Truelayer) ParseUrl(urlToParse string) *url.URL {
 	return returnValue
 }
 
-func (*Truelayer) GetCurrentUnixMilli() int64 {
+func (*Truelayer) GetTime() int64 {
 	return time.Now().UnixMilli()
 }
 
