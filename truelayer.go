@@ -9,12 +9,40 @@ import (
 )
 
 func init() {
-	modules.Register("k6/x/truelayer", new(Truelayer))
+	modules.Register("k6/x/truelayer", New())
 }
 
-type Truelayer struct{}
+type (
+	// RootModule is the global module instance that will create Truelayer
+	// instances for each VU.
+	RootModule struct{}
 
-type Url struct{}
+	// TruelayerModule represents an instance of the JS module.
+	TruelayerModuleInstance struct {
+		// Truelayer is the exported module instance.
+		*Truelayer
+	}
+)
+
+// Ensure the interfaces are implemented correctly.
+var (
+	_ modules.Instance = &TruelayerModuleInstance{}
+	_ modules.Module   = &RootModule{}
+)
+
+// New returns a pointer to a new RootModule instance.
+func New() *RootModule {
+	return &RootModule{}
+}
+
+// NewModuleInstance implements the modules.Module interface and returns
+// a new instance for each VU.
+func (*RootModule) NewModuleInstance(vu modules.VU) modules.Instance {
+	return &TruelayerModuleInstance{Truelayer: &Truelayer{}}
+}
+
+// Truelayer is the exported module instance.
+type Truelayer struct{}
 
 func (*Truelayer) Sign(kid string, pem string, path string, method string, headers map[string][]byte, body string) string {
 	signature, _ := tlsigning.SignWithPem(kid, []byte(pem)).
@@ -29,4 +57,10 @@ func (*Truelayer) Sign(kid string, pem string, path string, method string, heade
 func (*Truelayer) ParseUrl(urlToParse string) *url.URL {
 	returnValue, _ := url.Parse(urlToParse)
 	return returnValue
+}
+
+// Exports implements the modules.Instance interface and returns the exports
+// of the JS module.
+func (t *TruelayerModuleInstance) Exports() modules.Exports {
+	return modules.Exports{Default: t.Truelayer}
 }
