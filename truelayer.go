@@ -2,6 +2,7 @@ package truelayer
 
 import (
 	"net/url"
+	"time"
 
 	"go.k6.io/k6/js/modules"
 
@@ -57,6 +58,10 @@ func (*Truelayer) Sign(kid string, pem string, path string, method string, heade
 func (*Truelayer) ParseUrl(urlToParse string) *url.URL {
 	returnValue, _ := url.Parse(urlToParse)
 	return returnValue
+}
+
+func (*Truelayer) GetCurrentUnixMilli() int64 {
+	return time.Now().UnixMilli()
 }
 
 // Exports implements the modules.Instance interface and returns the exports
