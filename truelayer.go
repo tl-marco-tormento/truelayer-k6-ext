@@ -60,8 +60,8 @@ func (*Truelayer) ParseUrl(urlToParse string) *url.URL {
 	return returnValue
 }
 
-func (*Truelayer) GetTimeNano() int64 {
-	return time.Now().UnixNano()
+func (*Truelayer) GetTimeMicro() int64 {
+	return time.Now().UnixMicro()
 }
 
 // Exports implements the modules.Instance interface and returns the exports
